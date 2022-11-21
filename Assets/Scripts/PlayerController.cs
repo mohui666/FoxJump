@@ -87,6 +87,11 @@ public class PlayerController :MonoBehaviour
     {
         anim.SetFloat("running",Mathf.Abs(rb.velocity.x));
 
+        if(rb.velocity.y < 0.1f && !coll.IsTouchingLayers(ground))
+        {
+            anim.SetBool("falling",true);
+        }
+
         if (!anim.GetBool("hurt"))
         {
             if (isGround)
@@ -141,7 +146,7 @@ public class PlayerController :MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 jumpCount++;
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce * Time.deltaTime);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
             else if (transform.position.x < collision.gameObject.transform.position.x)
             {
