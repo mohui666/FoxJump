@@ -43,7 +43,7 @@ public class Enemy_Frog : MonoBehaviour
             {
                 Anim.SetBool("jumping",true);
                 rb.velocity = new Vector2(-Speed, JumpForce);
-            }           
+            }        
             
         }
         else
@@ -76,5 +76,6 @@ public class Enemy_Frog : MonoBehaviour
         {
             Anim.SetBool("falling",false);
         }
+        
     }
 }
