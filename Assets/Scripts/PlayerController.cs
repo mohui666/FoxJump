@@ -90,6 +90,11 @@ public class PlayerController :MonoBehaviour
         if(rb.velocity.y < 0.1f && !coll.IsTouchingLayers(ground))
         {
             anim.SetBool("falling",true);
+            anim.SetBool("jumping",false);
+        }
+        else
+        {
+            anim.SetBool("falling",false);
         }
 
         if (!anim.GetBool("hurt"))
@@ -102,7 +107,7 @@ public class PlayerController :MonoBehaviour
             {
                 anim.SetBool("jumping", true);
             }
-            else if (rb.velocity.y < 0)
+            else if (!isGround && rb.velocity.y < 0)
             {
                 anim.SetBool("jumping", false);
                 anim.SetBool("falling", true);
