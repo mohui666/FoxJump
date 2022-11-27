@@ -5036,9 +5036,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1857374338976430736, guid: 8d823a469695bf345b2d62e32ccd2fb4, type: 3}
+      propertyPath: m_Size.x
+      value: 0.56619835
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857374338976430736, guid: 8d823a469695bf345b2d62e32ccd2fb4, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: df4e5393c8dec6f49be963e8932b9d20, type: 2}
+    - target: {fileID: 1857374338976430736, guid: 8d823a469695bf345b2d62e32ccd2fb4, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.009225845
+      objectReference: {fileID: 0}
     - target: {fileID: 1857374338976430741, guid: 8d823a469695bf345b2d62e32ccd2fb4, type: 3}
       propertyPath: GemNum
       value: 

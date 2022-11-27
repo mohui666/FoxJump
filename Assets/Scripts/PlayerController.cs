@@ -147,9 +147,10 @@ public class PlayerController :MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemies")
         {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (anim.GetBool("falling"))
             {
-                Destroy(collision.gameObject);
+                enemy.JumpOn();
                 jumpCount++;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }

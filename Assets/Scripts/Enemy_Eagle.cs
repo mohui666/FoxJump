@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Eagle : MonoBehaviour
+public class Enemy_Eagle : Enemy
 {
     private Rigidbody2D rb;
-    private Collider2D Coll;
+    //private Collider2D Coll;
     public Transform leftpoint, rightpoint;
     public float Speed;
     private bool Faceleft = true;
     private float leftx, rightx;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         rb = GetComponent<Rigidbody2D>();
-        Coll = GetComponent<Collider2D>();
+        //Coll = GetComponent<Collider2D>();
         transform.DetachChildren();
         leftx = leftpoint.position.x;
         rightx = rightpoint.position.x;

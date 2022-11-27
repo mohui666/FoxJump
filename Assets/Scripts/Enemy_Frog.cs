@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Frog : MonoBehaviour
+public class Enemy_Frog : Enemy
 {
     private Rigidbody2D rb;
-    private Animator Anim;
+    //private Animator Anim;
     private Collider2D Coll;
     public LayerMask ground;
     public Transform leftpoint, rightpoint;
@@ -13,8 +13,9 @@ public class Enemy_Frog : MonoBehaviour
     private bool Faceleft = true;
     private float leftx, rightx;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         rb = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         Coll = GetComponent<Collider2D>();
@@ -78,4 +79,5 @@ public class Enemy_Frog : MonoBehaviour
         }
         
     }
+
 }
